@@ -11,6 +11,9 @@ attendance = (totalClasses - absences) / totalClasses
 # Approval rate is 6 or higher
 # Attendance rate of >= 80%
 
+print("The average grade is: ", round(avgGrade, 2))
+print("Attendance Rate: ", str(round(attendance * 100, 2)) + "%")
+
 if avgGrade >= 6:
     if attendance > 0.8:
         print("Congratulations, this student is approved!")
