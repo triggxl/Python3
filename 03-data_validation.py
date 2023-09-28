@@ -5,7 +5,17 @@
 dataValid = False
 # start a loop (while == false)
 while dataValid == False:
-    grade1 = float(input("Type the grade of the first test: "))
+    grade1 = input("Type the grade of the first test: ")
+    # check to see if valid number
+    try:
+        grade1 = float(grade1)
+    # catch with prompt for user
+    except:
+        print(
+            "Invalid input. Only numbers are accepted and decimals separated with a dot."
+        )
+        # in  order to make conversion and prevent crash
+        continue
     # create conditional for parameters
     if grade1 < 0 or grade1 > 10:
         # add print statement  for validation
@@ -19,7 +29,14 @@ while dataValid == False:
 dataValid = False
 
 while dataValid == False:
-    grade2 = float(input("Type the grade of the second test: "))
+    grade2 = input("Type the grade of the second test: ")
+    try:
+        grade2 = float(grade2)
+    except:
+        print(
+            "Invalid input. Only numbers are accepted and decimals separated with a dot."
+        )
+        continue
     if grade2 < 0 or grade2 > 10:
         print("Grade must be between 0 and 10")
         continue
@@ -29,7 +46,12 @@ while dataValid == False:
 dataValid = False
 
 while dataValid == False:
-    totalClasses = float(input("Type the number of classes: "))
+    totalClasses = (input("Type the number of classes: "))
+    try: 
+        totalClasses = int(totalClasses)
+    except:
+        print("Invalid input. Only numbers are accepted and decimals separated with a dot.")
+        continue
     if totalClasses <= 0:
         print("Classes cannot be a negative value")
         continue
@@ -39,9 +61,16 @@ while dataValid == False:
 dataValid = False
 
 while dataValid == False:
-    absences = float(input("Type the number of absences: "))
+    absences = (input("Type the number of absences: "))
+    try:
+        absences = int(absences)
+    except:
+        print("Absences must be a positive number")
+        continue
     if absences < 0 or absences > totalClasses:
-        print("Number of absences cannot be greater than number of classes andmust be between 0 and 20")
+        print(
+            "Number of absences cannot be greater than number of classes andmust be between 0 and 20"
+        )
         continue
     else:
         dataValid = True
