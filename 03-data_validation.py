@@ -1,6 +1,5 @@
 # Question for Python Meetup: How can I clean up my comments?
-# **Issue: not moving on to the second test**
-# making sure data is valid and within range
+# to make sure data is valid and within range
 
 # create variable before input, set to false
 dataValid = False
@@ -15,9 +14,9 @@ while dataValid == False:
         continue
     # else statement concludes valid input ending loop
     else:
-        dataValid == True
+        dataValid = True
 
-dataValid == False
+dataValid = False
 
 while dataValid == False:
     grade2 = float(input("Type the grade of the second test: "))
@@ -25,9 +24,9 @@ while dataValid == False:
         print("Grade must be between 0 and 10")
         continue
     else:
-        dataValid == True
+        dataValid = True
 
-dataValid == False
+dataValid = False
 
 while dataValid == False:
     totalClasses = float(input("Type the number of classes: "))
@@ -35,18 +34,17 @@ while dataValid == False:
         print("Classes cannot be a negative value")
         continue
     else:
-        dataValid == True
+        dataValid = True
 
-
-dataValid == False
+dataValid = False
 
 while dataValid == False:
     absences = float(input("Type the number of absences: "))
     if absences < 0 or absences > totalClasses:
-        print("Number of absences must be between 0 and 20")
+        print("Number of absences cannot be greater than number of classes andmust be between 0 and 20")
         continue
     else:
-        dataValid == True
+        dataValid = True
 
 avgGrade = (grade1 + grade2) / 2
 attendance = (totalClasses - absences) / totalClasses
