@@ -1,5 +1,6 @@
 # Question for Python Meetup: How can I clean up my comments?
-# to make sure data is valid and within range
+# **Issue: not moving on to the second test**
+# making sure data is valid and within range
 
 # create variable before input, set to false
 dataValid = False
