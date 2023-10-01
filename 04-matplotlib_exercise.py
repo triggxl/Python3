@@ -54,6 +54,7 @@ plt.title("This is your evolution timeline:")
 # plot them and show them
 plt.show()
 
+
 """
 Create a program to help the user type faster. Give him a word and ask him to write it five times. 
 Check how many seconds it took them to type the word at each round
